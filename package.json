@@ -2,6 +2,7 @@
   "name": "test-ssb-review-index",
   "version": "2.2.0",
   "dependencies": {
+    "multicb": "^1.2.2",
     "pull-stream": "^3.6.1",
     "typewise": "^1.0.3"
   },
