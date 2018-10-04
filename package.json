@@ -1,0 +1,16 @@
+{
+  "name": "test-ssb-review-index",
+  "version": "2.2.0",
+  "dependencies": {
+    "pull-stream": "^3.6.1",
+    "typewise": "^1.0.3"
+  },
+  "description": "tests for ssb-revisions indexes (kv maps)",
+  "devDependencies": {
+    "tape": "^4.9.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  }
+}
