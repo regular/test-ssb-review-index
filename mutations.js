@@ -36,7 +36,7 @@ module.exports = function (create) {
 
       pull(
         db.revisions.index.read({live: true, values: true, seqs: false}),
-        pull.take(6),
+        pull.take(7),
         pull.through( e=>{
           console.log('view', e)
         }),
@@ -48,7 +48,8 @@ module.exports = function (create) {
           t.deepEqual(result[2], {key: 2, value: b})
           t.deepEqual(result[3], {key: 3, value: b})
           t.deepEqual(result[4], {key: 1, value: undefined, type: 'del'})
-          t.deepEqual(result[5], {key: 4, value: c})
+          t.deepEqual(result[5], {key: 3, value: c})
+          t.deepEqual(result[6], {key: 4, value: c})
           cb1()
         })
       )
